@@ -15,7 +15,7 @@ jobs:
         operating-system: [ubuntu-latest, windows-latest, macOS-latest]
     steps:
     - name: Checkout
-      uses: actions/checkout@v2
+      uses: actions/checkout@v3
     - name: Set Node.js 12
       uses: actions/setup-node@v1
       with:
@@ -35,7 +35,7 @@ jobs:
         operating-system: [ubuntu-latest, windows-latest, macOS-latest]
     steps:
       - name: Checkout
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
       - name: Clear tool cache
         run: mv "${{ runner.tool_cache }}" "${{ runner.tool_cache }}.old"
       - name: Setup dotnet 3.0.100
@@ -63,7 +63,7 @@ jobs:
       https_proxy: http://squid-proxy:3128
     steps:
       - name: Checkout
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
       - name: Clear tool cache
         run: rm -rf $RUNNER_TOOL_CACHE/*
       - name: Setup dotnet 3.0.100
@@ -80,7 +80,7 @@ jobs:
       no_proxy: github.com,dotnetcli.blob.core.windows.net,download.visualstudio.microsoft.com,api.nuget.org
     steps:
       - name: Checkout
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
       - name: Clear tool cache
         run: mv "${{ runner.tool_cache }}" "${{ runner.tool_cache }}.old"
       - name: Setup dotnet 3.0.100
